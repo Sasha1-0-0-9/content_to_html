@@ -5,7 +5,6 @@ class StateToHTML
   	File.open("pet.html", "w") do |file|
   		emoji = state[-1]
   		state.delete_at(-1)
-  		p emoji
   		content.gsub! "[name]" , name
   		content.gsub! "[state]" , state.join("<br>")
   		content.gsub! "[emoji]" , emoji
