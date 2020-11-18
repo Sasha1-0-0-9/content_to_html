@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.1.0'
   s.date        = '2020-11-18'
   s.summary     = "Create simple html file from given content"
-  s.description = "A simple gem"
+  s.description = "Create simple html file from given content"
   s.authors     = ["Oleksandr Pysmennyi"]
   s.email       = 'sashapysmenny@gmail.com'
   s.files       = ["lib/content_to_html.rb"]
