@@ -1,6 +1,6 @@
 class ShowHTML
 
-  def initialize(filename = "index.html")
+  def create_template(filename = "index.html")
     file = File.new("#{filename}", "w")
     file.puts "<!DOCTYPE html>"
     file.puts "<html>"
@@ -13,19 +13,22 @@ class ShowHTML
     file.puts "</html>"
     file.close
 
-    @template = File.read("#{filename}")
+    template = File.read("#{filename}")
+    return template
   end
 
    # ↓↓↓  Для работы с консолью  ↓↓↓
   def html_from_console(content, bypass_html:false) # передавать bypass_html:true чтобы НЕ резать скрипты
+    text = create_template
     content.gsub! /[<>]/ , '&#128298;' if !bypass_html # режет скрипты в прямом смысле :)
     File.open("created_html.html", "w") do |file|
-      @template.gsub! "[content]" , content
-      file.puts @template
+      text.gsub! "[content]" , content
+      file.puts text
     end
   end
 
-  def html_for_pet(name, state, help) # для работы с Тамагочи
+# ↓↓↓  Для работы с Тамагочи  ↓↓↓
+  def html_for_pet(name, state, help)
   	content = File.read("index.html")
   	File.open("pet.html", "w") do |file|
   		emoji = state[-1]
