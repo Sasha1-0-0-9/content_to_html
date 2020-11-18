@@ -1,4 +1,4 @@
-class State_to_html
+class StateToHTML
 
   def html_for_pet(name, state, help) # для работы с Тамагочи
   	content = File.read("index.html")
