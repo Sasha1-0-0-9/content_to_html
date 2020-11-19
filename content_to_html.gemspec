@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'sashapysmenny@gmail.com'
   s.files       = ["lib/content_to_html.rb"]
   s.homepage    =
-    'https://github.com/Sasha1-0-0-9/RubyHW/blob/master/content_to_html'
+    'https://github.com/Sasha1-0-0-9/content_to_html'
   s.license       = 'MIT'
 end
