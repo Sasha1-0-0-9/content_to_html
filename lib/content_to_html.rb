@@ -27,7 +27,7 @@ class ShowHTML
   end
 
 # ↓↓↓  Для работы с Тамагочи  ↓↓↓
-  def html_for_pet(name, state)
+  def html_for_pet(name, state, emoji)
   	content = File.read("index.html")
   	File.open("pet.html", "w") do |file|
   		emoji = state[-1]
